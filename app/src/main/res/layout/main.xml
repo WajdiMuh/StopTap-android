@@ -6,9 +6,51 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true"
     tools:background="@android:color/background_light"
-    tools:context="com.wajdi.stoptap.MainActivity"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context="com.wajdi.stoptap.MainActivity">
 
+    <com.jawnnypoo.physicslayout.PhysicsRelativeLayout
+        android:id="@+id/physics_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boundsSize="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bganim1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@color/colorPrimary"
+            app:layout_bodyType="dynamic"
+            app:layout_fixedRotation="true"
+            app:layout_friction="0"
+            app:layout_restitution="0.75"
+            app:layout_density="40"
+            app:layout_shape="rectangle" />
+
+        <ImageView
+            android:id="@+id/bganim2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@color/colorAccent"
+            app:layout_bodyType="dynamic"
+            app:layout_fixedRotation="true"
+            app:layout_friction="0"
+            app:layout_restitution="0.75"
+            app:layout_density="40"
+            app:layout_shape="rectangle" />
+
+    </com.jawnnypoo.physicslayout.PhysicsRelativeLayout>
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
