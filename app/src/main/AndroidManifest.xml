@@ -24,6 +24,9 @@
         <activity
             android:name=".Settings"
             android:screenOrientation="reverseLandscape" />
+        <activity
+            android:name=".Language"
+            android:screenOrientation="reverseLandscape" />
     </application>
 
 </manifest>
