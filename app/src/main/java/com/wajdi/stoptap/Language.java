@@ -18,15 +18,17 @@ public class Language extends ListActivity {
         add("English\nSelected");
     }};
     private ArrayAdapter<String> arr;
+    private String langpos = "1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
         final SecurePreferences preferences = new SecurePreferences(this, "my-preferences", "Ww654321", true);
         final LTextView lan = findViewById(R.id.langt);
-        final LButton back = findViewById(R.id.back);
+        final LButton back = findViewById(R.id.backlang);
         lview = getListView();
-        switch (preferences.getString("lang")) {
+        langpos = preferences.getString("lang");
+        switch (langpos) {
             case "0":
                langsava.clear();
                langsava.add("عربي\nمختار");
@@ -75,9 +77,8 @@ public class Language extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         final LTextView lan = findViewById(R.id.langt);
-        final LButton back = findViewById(R.id.back);
-        final SecurePreferences preferences = new SecurePreferences(this, "my-preferences", "Ww654321", true);
-        preferences.put("lang", String.valueOf(position));
+        final LButton back = findViewById(R.id.backlang);
+        langpos = String.valueOf(position);
         switch (position){
             case 0:
                 langsava.clear();
@@ -102,5 +103,12 @@ public class Language extends ListActivity {
         super.onBackPressed();
         finish();
         overridePendingTransition(R.anim.fadeinintro,R.anim.fadeoutintro);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        final SecurePreferences preferences = new SecurePreferences(this, "my-preferences", "Ww654321", true);
+        preferences.put("lang",langpos);
     }
 }

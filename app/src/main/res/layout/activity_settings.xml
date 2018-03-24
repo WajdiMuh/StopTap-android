@@ -7,6 +7,25 @@
     android:background="@android:color/background_light"
     tools:context="com.wajdi.stoptap.Settings">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.wajdi.stoptap.LTextView
+        android:id="@+id/settt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:text="SETTINGS"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/lang"
         android:layout_width="40dp"
@@ -16,5 +35,103 @@
         android:src="@drawable/language"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/vib"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/vibrate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.wajdi.stoptap.LButton
+        android:id="@+id/backsett"
+        android:layout_width="77dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:paddingLeft="4dp"
+        android:paddingTop="3dp"
+        android:text="Back"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/musbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="8dp"
+        android:progressDrawable="@drawable/seekbar"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/musval"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.wajdi.stoptap.LTextView
+        android:id="@+id/must"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginBottom="10dp"
+        android:text="Music"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/musbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.wajdi.stoptap.LTextView
+        android:id="@+id/sfxt"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginTop="5dp"
+        android:text="SFX"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+    <SeekBar
+        android:id="@+id/sfxbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:progressDrawable="@drawable/seekbar"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintEnd_toEndOf="@+id/sfxval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sfxt" />
+
+    <com.wajdi.stoptap.LTextView
+        android:id="@+id/musval"
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="10"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/musbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/musbar" />
+
+    <com.wajdi.stoptap.LTextView
+        android:id="@+id/sfxval"
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="10"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sfxbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sfxbar" />
 
 </android.support.constraint.ConstraintLayout>

@@ -21,20 +21,22 @@
 
     <ListView
         android:id="@android:id/list"
-        android:layout_width="576dp"
-        android:layout_height="261dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/back"
+        android:divider="#737373"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/backlang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:listSelector="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@+id/langt" />
 
     <com.wajdi.stoptap.LButton
-        android:id="@+id/back"
+        android:id="@+id/backlang"
         android:layout_width="77dp"
         android:layout_height="32dp"
         android:layout_marginBottom="10dp"
