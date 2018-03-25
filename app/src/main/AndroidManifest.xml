@@ -10,10 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="reverseLandscape"
         android:supportsRtl="false"
+        android:keepScreenOn="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:resizeableActivity="false"
+            android:keepScreenOn="true"
             android:screenOrientation="reverseLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +25,16 @@
         </activity>
         <activity
             android:name=".Settings"
+            android:keepScreenOn="true"
             android:screenOrientation="reverseLandscape" />
         <activity
+            android:keepScreenOn="true"
             android:name=".Language"
             android:screenOrientation="reverseLandscape" />
+        <activity
+            android:keepScreenOn="true"
+            android:name=".dev"
+            android:screenOrientation="reverseLandscape"  />
     </application>
 
 </manifest>

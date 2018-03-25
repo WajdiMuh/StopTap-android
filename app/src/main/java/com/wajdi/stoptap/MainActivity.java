@@ -39,6 +39,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         final LButton play = findViewById(R.id.play);
         final ImageView settbutton = findViewById(R.id.setting);
         final LButton htp = findViewById(R.id.htp);
+        final ImageView devb = findViewById(R.id.dev);
         final PhysicsRelativeLayout physicslayout = findViewById(R.id.physics_layout);
         final ImageView bganim1 = findViewById(R.id.bganim1);
         final ImageView bganim2 = findViewById(R.id.bganim2);
@@ -183,6 +184,16 @@ public class MainActivity extends Activity implements SensorEventListener {
         play.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 physicslayout.getPhysics().setGravity(5f, 0f);
+            }
+        });
+        devb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkgravity = false;
+                physicslayout.getPhysics().disablePhysics();
+                Intent intent = new Intent(MainActivity.this, dev.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fadeinintro,R.anim.fadeoutintro);
             }
         });
         htp.setOnClickListener(new View.OnClickListener() {
